@@ -10,7 +10,7 @@ set.seed(1234)
 options(stringsAsFactors = FALSE)
 
 # ----- Paths (EDIT THESE) -----
-project_root <- "/Users/Paula/Desktop/Wei_2023_Analysis"
+project_root <- "{Your_Folder}"
 input_dir    <- file.path(project_root, "GSE239909_RAW")
 in_dir       <- file.path(project_root, "Outputs_Code2_20251130")
 out_dir      <- file.path(project_root, "Outputs_Code3_20251130")
