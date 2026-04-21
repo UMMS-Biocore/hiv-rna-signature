@@ -10,7 +10,7 @@ set.seed(1234)
 options(stringsAsFactors = FALSE)
 
 # ----- Paths (EDIT THESE) -----
-project_root <- "/Users/Paula/Desktop/Wei_2023_Analysis"
+project_root <- "{Your_Folder}"
 input_dir    <- file.path(project_root, "GSE239909_RAW")
 out_dir      <- file.path(project_root, "Outputs_Code1_20251130")
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
