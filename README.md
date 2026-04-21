@@ -1,4 +1,4 @@
-# HIV RNA+ Profile Scoring and Comparison in Wei et al. scRNA-seq
+# HIV RNA+ Profile Scoring and Comparison
 
 This repository contains an ordered 7-step R workflow for processing the Wei et al. (Immunity 2023) single-cell RNA-seq dataset, annotating macro programs, importing HIV RNA+ labels, and comparing two gene-signature profiles:
 - A bulk RNA-seq derived profile (`our` profile)
