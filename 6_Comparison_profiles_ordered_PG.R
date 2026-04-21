@@ -10,7 +10,7 @@ suppressPackageStartupMessages({
 set.seed(1234); options(stringsAsFactors = FALSE)
 
 # ----- Paths (EDIT THESE) ----------------------------------------------------------
-project_root <- "/Users/Paula/Desktop/Wei_2023_Analysis"
+project_root <- "{Your_Folder}"
 in_dir_code4 <- file.path(project_root, "Outputs_Code4_20251130")
 # If out_dir not set earlier (e.g., by Code 5), define it here:
 if (!exists("out_dir")) out_dir <- file.path(project_root, "Outputs_Code6_20251130")
