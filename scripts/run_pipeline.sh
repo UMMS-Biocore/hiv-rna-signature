@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_ROOT="${PROJECT_ROOT:-/data}"
+PROJECT_ROOT="${PROJECT_ROOT:-/mnt/project}"
 WORKFLOW_STEP="${1:-all}"
 
 SCRIPTS=(

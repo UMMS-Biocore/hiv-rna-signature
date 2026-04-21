@@ -141,32 +141,38 @@ Main R packages used across scripts:
 - `ggplot2`, `patchwork`, `cowplot`, `viridis`, `scales`, `ggvenn`
 
 ## Docker
-Build image:
+
+### Installation
+1. Install Docker Desktop (or Docker Engine + Docker Compose).
+2. Clone this repository and `cd` into it.
+
+### Build
 ```bash
 docker build -t hiv-rna-signature:latest .
 ```
 
+### Run (Mount Downloaded Project Folder to `/mnt/project`)
 Run full workflow (steps 1-7):
 ```bash
 docker run --rm \
-  -e PROJECT_ROOT=/data \
-  -v /absolute/path/to/your/project_root:/data \
+  -e PROJECT_ROOT=/mnt/project \
+  -v /absolute/path/to/your/downloaded_folder:/mnt/project \
   hiv-rna-signature:latest all
 ```
 
 Run a single step:
 ```bash
 docker run --rm \
-  -e PROJECT_ROOT=/data \
-  -v /absolute/path/to/your/project_root:/data \
+  -e PROJECT_ROOT=/mnt/project \
+  -v /absolute/path/to/your/downloaded_folder:/mnt/project \
   hiv-rna-signature:latest 4
 ```
 
-Notes:
-- `PROJECT_ROOT` replaces the `{Your_Folder}` placeholder at runtime inside the container.
+### Notes
+- The container defaults to `PROJECT_ROOT=/mnt/project`.
+- `PROJECT_ROOT` replaces the `project_root <- "{Your_Folder}"` placeholder at runtime.
 - You can pass `all`, `1`..`7`, or an exact script filename to the container entrypoint.
-- Input files (e.g., `GSE239909_RAW`, `bc_RNA_HIV.txt`, DEG Excel files) must exist under the mounted `PROJECT_ROOT`.
-
+- Required input files (e.g., `GSE239909_RAW`, `bc_RNA_HIV.txt`, DEG Excel files) must exist under the mounted folder.
 ## Required external inputs
 - GEO matrix files from `GSE239909_RAW`.
 - HIV RNA call table: `bc_RNA_HIV.txt`.
