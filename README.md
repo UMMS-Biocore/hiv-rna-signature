@@ -5,7 +5,7 @@ This repository contains an ordered 7-step R workflow for processing the Wei et 
 - The Wei et al. article-derived RNA+ profile (`article` profile)
 
 ## Biological and analytical goal
-The workflow classifies cells as `Profile+` or `Other` using signature scoring and strict z-score thresholds, then compares agreement between profiles globally, by macro program, and within HIV RNA+ cells.
+The workflow classifies cells as `Profiles` or `Other` using signature scoring and strict z-score thresholds, then compares agreement between profiles globally, by macro program, and within HIV RNA+ cells.
 
 Core scoring logic implemented in the code:
 1. Split each signature into `UP` and `DOWN` gene sets.
