@@ -10,7 +10,7 @@ set.seed(1234)
 options(stringsAsFactors = FALSE)
 
 # ----- Paths (EDIT THESE) ----------------------------------------------------------
-project_root <- "/Users/Paula/Desktop/Wei_2023_Analysis"
+project_root <- "{Your_Folder}"
 # Excel inputs:
 deg_path      <- file.path(project_root, "Clayton_DEG_List.xlsx")    # EDIT if stored elsewhere
 article_path  <- file.path(project_root, "Article_DEG_list.xlsx")    # EDIT if stored elsewhere
