@@ -5,7 +5,7 @@ This repository contains an ordered 7-step R workflow for processing the Wei et 
 - The Wei et al. article-derived RNA+ profile (`article` profile)
 
 ## Biological and analytical goal
-The workflow classifies cells as `Profiles` or `Other` using signature scoring and strict z-score thresholds, then compares agreement between profiles globally, by macro program, and within HIV RNA+ cells.
+The workflow classifies cells as `Profile+` or `Other` using signature scoring and strict z-score thresholds, then compares agreement between profiles globally, by macro program, and within HIV RNA+ cells.
 
 Core scoring logic implemented in the code:
 1. Split each signature into `UP` and `DOWN` gene sets.
@@ -173,6 +173,7 @@ docker run --rm \
 - `PROJECT_ROOT` replaces the `project_root <- "{Your_Folder}"` placeholder at runtime.
 - You can pass `all`, `1`..`7`, or an exact script filename to the container entrypoint.
 - Required input files (e.g., `GSE239909_RAW`, `bc_RNA_HIV.txt`, DEG Excel files) must exist under the mounted folder.
+
 ## Required external inputs
 - GEO matrix files from `GSE239909_RAW`.
 - HIV RNA call table: `bc_RNA_HIV.txt`.
@@ -181,11 +182,6 @@ docker run --rm \
   - `Article_DEG_list.xlsx`
 
 ## Reproducibility notes
-- All scripts set `set.seed(1234)`.
 - Path variables are currently hard-coded and should be updated before running.
 - Scripts are designed to run in numeric order (`1` to `7`).
-
-## Known caveats
-- Filenames use `Scorring` spelling in multiple script names.
-- Script 4 prints one output filename with an apparent typo (`WWei...`) in a message string, while writing the correct stable file (`Wei_scRNA_with_profiles_scored.rds`).
 
