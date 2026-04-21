@@ -182,6 +182,6 @@ docker run --rm \
   - `Article_DEG_list.xlsx`
 
 ## Reproducibility notes
-- Path variables are currently hard-coded and should be updated before running.
+- Path variables are currently hard-coded and should be updated before running manually.
 - Scripts are designed to run in numeric order (`1` to `7`).
 
