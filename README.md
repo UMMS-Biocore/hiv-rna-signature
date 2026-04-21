@@ -140,6 +140,33 @@ Main R packages used across scripts:
 - `readr`, `readxl`
 - `ggplot2`, `patchwork`, `cowplot`, `viridis`, `scales`, `ggvenn`
 
+## Docker
+Build image:
+```bash
+docker build -t hiv-rna-signature:latest .
+```
+
+Run full workflow (steps 1-7):
+```bash
+docker run --rm \
+  -e PROJECT_ROOT=/data \
+  -v /absolute/path/to/your/project_root:/data \
+  hiv-rna-signature:latest all
+```
+
+Run a single step:
+```bash
+docker run --rm \
+  -e PROJECT_ROOT=/data \
+  -v /absolute/path/to/your/project_root:/data \
+  hiv-rna-signature:latest 4
+```
+
+Notes:
+- `PROJECT_ROOT` replaces the `{Your_Folder}` placeholder at runtime inside the container.
+- You can pass `all`, `1`..`7`, or an exact script filename to the container entrypoint.
+- Input files (e.g., `GSE239909_RAW`, `bc_RNA_HIV.txt`, DEG Excel files) must exist under the mounted `PROJECT_ROOT`.
+
 ## Required external inputs
 - GEO matrix files from `GSE239909_RAW`.
 - HIV RNA call table: `bc_RNA_HIV.txt`.
