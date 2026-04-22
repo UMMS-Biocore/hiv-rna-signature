@@ -138,6 +138,3 @@ Please also cite the Wei et al. (2023) publication and GEO accession GSE239909 w
 - Source code: [MIT](LICENSE)
 - Data artifacts on Zenodo: [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/)
 
-## Contact
-
-Kiera L. Clayton — kiera.clayton@umassmed.edu — UMass Chan Medical School, Department of Pathology.
