@@ -1,10 +1,10 @@
-# HIV-infected CD4+ T cells that survive NK cell attack — source code and processed single-cell data
+# Loss of Vpr-driven TRAIL-R2 expression protects HIV-infected cells from non-cannonical NK cell TRAIL attack
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19699921.svg)](https://doi.org/10.5281/zenodo.19699921)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Data License: CC BY 4.0](https://img.shields.io/badge/Data%20License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 
-This repository contains the source code, inputs, and derived outputs for the secondary single-cell RNA-seq analysis in Grasberger et al., *"HIV-infected CD4+ T cells that survive NK cell attack evade detection by gain of inhibitory MHC-I and loss of activating TRAIL-R2 expression."* The pipeline re-processes the [Wei et al. (Immunity 2023) CITE-seq dataset](https://doi.org/10.1016/j.immuni.2023.10.002) (GEO: [GSE239909](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239909)) of HIV RNA+ CD4+ T cells from people with HIV, and projects onto it a bulk RNA-seq-derived gene signature of *in vitro* HIV-infected CD4+ T cells that survive NK cell attack (the *our* profile, derived from the associated study) alongside the Wei et al. HIV RNA+ signature (the *article* profile).
+This repository contains the source code, inputs, and derived outputs for the secondary single-cell RNA-seq analysis in Grasberger et al., *"Loss of Vpr-driven TRAIL-R2 expression protects HIV-infected cells from non-cannonical NK cell TRAIL attack"* The pipeline re-processes the [Wei et al. (Immunity 2023) CITE-seq dataset](https://doi.org/10.1016/j.immuni.2023.10.002) (GEO: [GSE239909](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239909)) of HIV RNA+ CD4+ T cells from people with HIV, and projects onto it a bulk RNA-seq-derived gene signature of *in vitro* HIV-infected CD4+ T cells that survive NK cell attack (the *our* profile, derived from the associated study) alongside the Wei et al. HIV RNA+ signature (the *article* profile).
 
 Both profiles are scored on every cell using a common framework: split each signature into `UP` and `DOWN` gene sets, module-score each with `AddModuleScore`, combine into a signed `UP − DOWN` score, z-standardize across cells, and call cells *Profile+* at increasing thresholds (`z ≥ 1.0`, `1.5`, `2.0`). Profile concordance is then quantified globally, per macro-program, and within the HIV RNA+ subset.
 
