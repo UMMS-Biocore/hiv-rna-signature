@@ -9,8 +9,12 @@ suppressPackageStartupMessages({
 })
 set.seed(1234); options(stringsAsFactors = FALSE)
 
-# ----- Paths (EDIT THESE) ----------------------------------------------------------
-project_root <- "{Your_Folder}"
+# ----- Paths ----------------------------------------------------------------------
+project_root <- Sys.getenv("PROJECT_ROOT", unset = "")
+if (!nzchar(project_root)) {
+  stop("PROJECT_ROOT environment variable is not set. ",
+       "Set it to the absolute path of your project directory, or use scripts/run_pipeline.sh.")
+}
 in_dir_code4 <- file.path(project_root, "Outputs_Code4_20251130")
 # If out_dir not set earlier (e.g., by Code 5), define it here:
 if (!exists("out_dir")) out_dir <- file.path(project_root, "Outputs_Code6_20251130")

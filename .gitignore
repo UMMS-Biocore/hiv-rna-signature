@@ -2,3 +2,34 @@
 .RData
 .Rproj.user/
 .DS_Store
+
+# Large data and derived outputs — distributed via Zenodo, not GitHub
+GSE239909_RAW/
+Outputs_Code1_*/
+Outputs_Code2_*/
+Outputs_Code3_*/
+Outputs_Code4_*/
+Outputs_Code5_*/
+Outputs_Code6_*/
+Outputs_Code7_*/
+*.zip
+*.rds
+*.mtx
+*.mtx.gz
+
+# Non-GEO pipeline inputs — distributed via Zenodo, not GitHub
+bc_RNA_HIV.txt
+Clayton_DEG_List.xlsx
+Article_DEG_list.xlsx
+
+# Local logs and state
+viafoundry_errors.log
+*.log
+
+# Secrets — NEVER commit
+.env
+.env.*
+!.env.example
+
+# Zenodo upload local state (contains deposition IDs, tokens are env-only)
+.zenodo_state.json

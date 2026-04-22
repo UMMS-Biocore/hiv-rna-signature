@@ -3,3 +3,16 @@
 .RData
 .Rproj.user
 .DS_Store
+
+# Large data — mounted at runtime, not baked into the image
+GSE239909_RAW/
+Outputs_Code*_*/
+*.rds
+*.mtx
+*.mtx.gz
+*.zip
+
+# Secrets and local state — never bake into the image
+.env
+.env.*
+.zenodo_state.json

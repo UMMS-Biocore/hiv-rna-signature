@@ -9,8 +9,15 @@ suppressPackageStartupMessages({
 set.seed(1234)
 options(stringsAsFactors = FALSE)
 
-# ----- Paths (EDIT THESE) -----
-project_root <- "{Your_Folder}"
+# ----- Paths -----
+# PROJECT_ROOT must be set in the environment. No hardcoded paths.
+project_root <- Sys.getenv("PROJECT_ROOT", unset = "")
+if (!nzchar(project_root)) {
+  stop("PROJECT_ROOT environment variable is not set. ",
+       "Set it to the absolute path of your project directory, e.g.:\n",
+       "  PROJECT_ROOT=/path/to/project Rscript ", "this_script.R\n",
+       "Or use scripts/run_pipeline.sh, which handles this for you.")
+}
 input_dir    <- file.path(project_root, "GSE239909_RAW")
 out_dir      <- file.path(project_root, "Outputs_Code1_20251130")
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)

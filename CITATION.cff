@@ -1,0 +1,126 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+title: "HIV-infected CD4+ T cells that survive NK cell attack evade detection by gain of inhibitory MHC-I and loss of activating TRAIL-R2 expression — source code and processed single-cell data"
+abstract: >-
+  Source code, inputs, and derived outputs for the secondary single-cell RNA-seq
+  analysis in Grasberger et al. The pipeline re-processes the Wei et al.
+  (Immunity 2023; GEO: GSE239909) CITE-seq dataset of HIV RNA+ CD4+ T cells,
+  annotates four canonical transcriptional macro-programs (Proliferation,
+  Cytotoxic, AP-1/TNF, IRF/IFN), and scores every cell against two independent
+  gene signatures: a bulk RNA-seq-derived profile of in vitro HIV-infected CD4+
+  T cells that survive NK cell attack, and the Wei et al. HIV RNA+ signature.
+  Profiles are compared at three z-score thresholds to quantify concordance,
+  and composition is summarized within the HIV RNA+ subset.
+type: software
+authors:
+  - family-names: Grasberger
+    given-names: Paula E.
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Sondrini
+    given-names: Abigail R.
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Glidden
+    given-names: Nicole
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Modica
+    given-names: Amanda
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Pushlar
+    given-names: Natalie
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Bedir
+    given-names: Seden
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Bromfield
+    given-names: Tara
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Gentling
+    given-names: Sheldon
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Cheema
+    given-names: Komal
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+  - family-names: Kucukural
+    given-names: Alper
+    affiliation: "University of Massachusetts Chan Medical School, Department of Genomics and Computational Biology; VIA Scientific, Inc."
+  - family-names: Ozdemir
+    given-names: Milena
+    affiliation: "VIA Scientific, Inc."
+  - family-names: Zapp
+    given-names: Maria
+    affiliation: "University of Massachusetts Chan Medical School, Department of Genomics and Computational Biology"
+  - family-names: Bosque
+    given-names: Alberto
+    affiliation: "George Washington University, Department of Microbiology, Immunology and Tropical Medicine"
+  - family-names: Leyre
+    given-names: Louise
+    affiliation: "Weill Cornell Medicine, Department of Medicine"
+  - family-names: Shulkin
+    given-names: Aaron
+    affiliation: "Ragon Institute of MGH, MIT and Harvard"
+  - family-names: Piechocka-Trocha
+    given-names: Alicja
+    affiliation: "Ragon Institute of MGH, MIT and Harvard"
+  - family-names: Jones
+    given-names: R. Brad
+    affiliation: "Weill Cornell Medicine, Department of Medicine"
+  - family-names: Clayton
+    given-names: Kiera L.
+    email: kiera.clayton@umassmed.edu
+    affiliation: "University of Massachusetts Chan Medical School, Department of Pathology"
+repository-code: "https://github.com/UMMS-Biocore/hiv-rna-signature"
+url: "https://github.com/UMMS-Biocore/hiv-rna-signature"
+license: MIT
+keywords:
+  - single-cell RNA-seq
+  - CITE-seq
+  - HIV
+  - HIV reservoir
+  - NK cells
+  - MHC-I
+  - TRAIL-R2
+  - Seurat
+  - signature scoring
+  - Wei et al. 2023
+  - GSE239909
+references:
+  - type: article
+    authors:
+      - family-names: Wei
+        given-names: Yanqin
+      - family-names: Davenport
+        given-names: Timothy C.
+      - family-names: Collora
+        given-names: Jack A.
+      - family-names: Ma
+        given-names: Haocong K.
+      - family-names: Pinto-Santini
+        given-names: Delia
+      - family-names: Lama
+        given-names: Javier
+      - family-names: Alfaro
+        given-names: Ricardo
+      - family-names: Duerr
+        given-names: Ann
+      - family-names: Ho
+        given-names: Ya-Chi
+    title: >-
+      Single-cell epigenetic, transcriptional, and protein profiling of latent
+      and active HIV-1 reservoir revealed that IKZF3 promotes HIV-1 persistence
+    journal: Immunity
+    year: 2023
+    volume: 56
+    issue: 11
+    start: 2584
+    end: 2601
+    doi: 10.1016/j.immuni.2023.10.002
+  - type: database
+    title: "GEO accession GSE239909"
+    url: "https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE239909"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.19699921"
+    description: "Concept DOI (always latest version)"
+  - type: doi
+    value: "10.5281/zenodo.19699922"
+    description: "Version-specific DOI (v1.0.0)"

@@ -9,11 +9,15 @@ suppressPackageStartupMessages({
 set.seed(1234)
 options(stringsAsFactors = FALSE)
 
-# ----- Paths (EDIT THESE) ----------------------------------------------------------
-project_root <- "{Your_Folder}"
+# ----- Paths ----------------------------------------------------------------------
+project_root <- Sys.getenv("PROJECT_ROOT", unset = "")
+if (!nzchar(project_root)) {
+  stop("PROJECT_ROOT environment variable is not set. ",
+       "Set it to the absolute path of your project directory, or use scripts/run_pipeline.sh.")
+}
 # Excel inputs:
-deg_path      <- file.path(project_root, "Clayton_DEG_List.xlsx")    # EDIT if stored elsewhere
-article_path  <- file.path(project_root, "Article_DEG_list.xlsx")    # EDIT if stored elsewhere
+deg_path      <- file.path(project_root, "Clayton_DEG_List.xlsx")
+article_path  <- file.path(project_root, "Article_DEG_list.xlsx")
 # RDS inputs/outputs:
 in_dir_code3  <- file.path(project_root, "Outputs_Code3_20251130")
 out_dir       <- file.path(project_root, "Outputs_Code4_20251130")

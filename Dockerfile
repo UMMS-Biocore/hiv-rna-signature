@@ -23,7 +23,10 @@ RUN R -q -e "install.packages(c('Seurat','harmony','Matrix','dplyr','tibble','ti
 
 WORKDIR /workspace
 COPY . /workspace
-RUN chmod +x /workspace/scripts/run_pipeline.sh
+RUN chmod +x /workspace/scripts/*.sh
+
+# Default PROJECT_ROOT inside the container (override with -e PROJECT_ROOT=...).
+ENV PROJECT_ROOT=/mnt/project
 
 ENTRYPOINT ["/workspace/scripts/run_pipeline.sh"]
 CMD ["all"]
